@@ -17,15 +17,17 @@ namespace RPGFramework.Geography
         // What area this belongs to 
         public int AreaId { get; set; } = 0;
 
+        // Description of the room
+        public string Description { get; set; } = "";
+
         // Icon to display on map
         public string MapIcon { get; set; } = DisplaySettings.RoomMapIcon;
         public string MapColor { get; set; } = DisplaySettings.RoomMapIconColor;
 
         // Name of the room
         public string Name { get; set; } = "";
-
-        // Description of the room
-        public string Description { get; set; } = "";
+       
+        public List<string> Tags { get; set; } = new List<string>(); // (for scripting or special behavior)
 
         // List of exits from the room
         public List<int> ExitIds { get; set; } = new List<int>();

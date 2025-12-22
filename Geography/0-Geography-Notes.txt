@@ -1,0 +1,8 @@
+﻿For rooms we'll want to track
+	Inside / Outside
+	Is Lit (Inside)
+
+For exits we'll want to track
+	Open / Closed / Locked
+	
+For areas we'll want to track

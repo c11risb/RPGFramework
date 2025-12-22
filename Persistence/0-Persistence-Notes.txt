@@ -1,0 +1,5 @@
+﻿Persistence (and GameState) objects for:
+	Object Catalog (List of all item definitions)
+	Instance Database (All instantiated items in the game world)
+		Think about how much of this should stay loaded in memory versus being loaded on demand.
+		For instance, if players aren't logged in, do we need their inventory items loaded in memory?
