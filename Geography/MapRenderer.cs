@@ -1,4 +1,5 @@
-﻿using RPGFramework.Enums;
+﻿using RPGFramework.Display;
+using RPGFramework.Enums;
 using Spectre.Console;
 using Spectre.Console.Rendering;
 
@@ -38,7 +39,8 @@ namespace RPGFramework.Geography
                 cells[(x, y)] = new LocalMapCell
                 {
                     RoomId = room.Id,
-                    IsPlayerHere = room.Id == startRoom.Id
+                    IsPlayerHere = room.Id == startRoom.Id,
+                    MapIcon = $"{room.MapColor}{room.MapIcon}[/]"
                 };
 
                 if (dist == radius)
@@ -74,8 +76,9 @@ namespace RPGFramework.Geography
                 .Border(TableBorder.None)
                 .HideHeaders();
 
-            // 5 columns
-            for (int i = 0; i < radius * 2 + 1; i++)
+            int size = radius * 2 + 1;
+            // 
+            for (int i = 0; i < size; i++)
             {
                 table.AddColumn(new TableColumn(string.Empty).Centered());
             }
@@ -92,12 +95,13 @@ namespace RPGFramework.Geography
                         // Player in this room
                         if (cell.IsPlayerHere)
                         {
-                            row.Add(new Markup("[bold black on yellow] @ [/]").Centered());
+                            row.Add(new Markup($"{DisplaySettings.YouAreHereMapIconColor} "
+                            + $"{DisplaySettings.YouAreHereMapIcon} [/]").Centered());
                         }
                         else
                         {
                             // A discovered room
-                            row.Add(new Markup("[green]■[/]").Centered());
+                            row.Add(new Markup(cell.MapIcon).Centered());
                         }
                     }
                     else
@@ -113,7 +117,7 @@ namespace RPGFramework.Geography
             // Optional title / legend
             var panel = new Panel(table)
             {
-                Header = new PanelHeader("Local Map (5x5)"),
+                Header = new PanelHeader($"Local Map ({size}x{size})"),
                 Border = BoxBorder.Rounded
             };
 
@@ -125,6 +129,7 @@ namespace RPGFramework.Geography
         {
             public int RoomId { get; init; }
             public bool IsPlayerHere { get; init; }
+            public string MapIcon { get; init; }
         }
     }
 }

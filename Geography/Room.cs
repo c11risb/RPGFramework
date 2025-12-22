@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RPGFramework.Display;
 using RPGFramework.Enums;
 
 namespace RPGFramework.Geography
@@ -15,6 +16,10 @@ namespace RPGFramework.Geography
 
         // What area this belongs to 
         public int AreaId { get; set; } = 0;
+
+        // Icon to display on map
+        public string MapIcon { get; set; } = DisplaySettings.RoomMapIcon;
+        public string MapColor { get; set; } = DisplaySettings.RoomMapIconColor;
 
         // Name of the room
         public string Name { get; set; } = "";

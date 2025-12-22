@@ -22,7 +22,7 @@ namespace RPGFramework
     public sealed class GameState
     {
         // Static Fields and Properties
-        private static readonly Lazy<GameState> _instance = new Lazy<GameState>(() => new GameState());
+        private static readonly Lazy<GameState> _instance = new(() => new GameState());
 
         public static GameState Instance => _instance.Value;
 
@@ -30,6 +30,7 @@ namespace RPGFramework
         public static IGamePersistence Persistence { get; set; } = new JsonGamePersistence();
 
         public bool IsRunning { get; private set; } = false;
+
         // Fields
         //private bool IsRunning = false;
         private Thread? _saveThread;
@@ -222,6 +223,16 @@ namespace RPGFramework
 
         }
 
+        /// <summary>
+        /// Stops the server, saving all player and area data, disconnecting online players, 
+        /// and terminating the application.
+        /// </summary>
+        /// <remarks>This method performs a graceful shutdown by persisting all relevant data, 
+        /// logging out online users, stopping background threads, and closing network 
+        /// connections before exiting the process.</remarks>
+        /// <returns>A task that represents the asynchronous stop operation. The application 
+        /// will terminate upon completion.</returns>
+        /// TODO: Allow user to supply a duration to avoid immediate shutdown
         public async Task Stop()
         {               
             await SaveAllPlayers(includeOffline: true);         

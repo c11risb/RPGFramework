@@ -14,9 +14,33 @@ namespace RPGFramework.Commands
         {
             return new List<ICommand>
             {
+                new MapCommand(),
                 new MoveCommand(),
                 // Add more navigation commands here as needed
             };
+        }
+    }
+
+    /// <summary>
+    /// Represents a command that displays the local map to a player character.
+    /// </summary>
+    /// <remarks>The <see cref="MapCommand"/> is typically invoked by player characters to view their
+    /// immediate surroundings. This command is not applicable to non-player characters.</remarks>
+    public class MapCommand : ICommand
+    {
+        public string Name => "map";
+
+        public IEnumerable<string> Aliases => new List<string> { };
+
+        public bool Execute(Character character, List<string> parameters)
+        {
+            if (character is Player)
+            {
+                MapRenderer.RenderLocalMap((Player)character, 2);
+                return true;
+            }
+
+            return false;
         }
     }
 
