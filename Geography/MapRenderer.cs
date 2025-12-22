@@ -5,7 +5,7 @@ using Spectre.Console.Rendering;
 
 namespace RPGFramework.Geography
 {
-    public static class MapRenderer
+    internal static class MapRenderer
     {
         // North = y - 1, South = y + 1, East = x + 1, West = x - 1
         private static readonly Dictionary<Direction, (int dx, int dy)> Offsets = new()

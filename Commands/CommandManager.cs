@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace RPGFramework.Commands
 {
-    public static class CommandManager
+    internal static class CommandManager
     {
         private static readonly List<ICommand> _commands = new List<ICommand>();
 

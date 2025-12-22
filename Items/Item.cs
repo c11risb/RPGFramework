@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework
 {
-    public class Item
+    internal class Item
     {
         public int Id { get; set; } = 0;
         public string Description { get; set; } = ""; // What you see when you look at it

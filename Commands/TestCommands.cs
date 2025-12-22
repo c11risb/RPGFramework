@@ -1,11 +1,4 @@
-﻿using RPGFramework.Display;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RPGFramework.Commands
+﻿namespace RPGFramework.Commands
 {
     internal class TestCommands
     {
@@ -14,7 +7,7 @@ namespace RPGFramework.Commands
             return new List<ICommand>
             {
                 new TestItemSizeCommand(),
-                // Add more builder commands here as needed
+                // Add more test commands here as needed
             };
         }
     }
@@ -25,7 +18,7 @@ namespace RPGFramework.Commands
     /// <remarks>This command is intended for diagnostic or testing purposes to estimate the memory footprint
     /// of <see cref="Item"/> objects. When executed, it creates 100,000 <see cref="Item"/> instances, calculates the
     /// total memory used, and outputs the results to the player if the character is a player.</remarks>
-    public class TestItemSizeCommand : ICommand
+    internal class TestItemSizeCommand : ICommand
     {
         public string Name => "testitemsize";
         public IEnumerable<string> Aliases => new List<string>() { };

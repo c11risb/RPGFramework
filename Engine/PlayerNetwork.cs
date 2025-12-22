@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework
 {
-    public class PlayerNetwork
+    internal class PlayerNetwork
     {
         public TcpClient Client { get; }
         public StreamWriter Writer { get; }

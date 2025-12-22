@@ -8,7 +8,7 @@ using RPGFramework.Enums;
 
 namespace RPGFramework.Geography
 {
-    public class Room
+    internal class Room
     {
         #region --- Properties ---
         // Unique identifier for the room

@@ -12,7 +12,7 @@ using RPGFramework.Display;
 using RPGFramework.Commands;
 using RPGFramework.Geography;
 
-public class TelnetServer
+internal class TelnetServer
 {
     private TcpListener _listener;
     private bool _isRunning;

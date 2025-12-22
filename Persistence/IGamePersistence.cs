@@ -8,7 +8,7 @@ namespace RPGFramework.Persistence
     /// But we may want to implement a SQLite / Entity Framework based persistence mechanism later.
     /// Add methods as needed to store additional game state information.
     /// </summary>
-    public interface IGamePersistence
+    internal interface IGamePersistence
     {
         /// <summary>
         /// Asynchronously loads all available areas and returns them as a read-only dictionary.

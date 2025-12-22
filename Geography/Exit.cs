@@ -7,7 +7,7 @@ using RPGFramework.Enums;
 
 namespace RPGFramework.Geography
 {
-    public class Exit
+    internal class Exit
     {
         public int Id { get; set; } = 0;
         public Direction ExitDirection { get; set; }

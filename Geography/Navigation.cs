@@ -10,7 +10,7 @@ namespace RPGFramework.Geography
     /// <summary>
     /// Primarily respoonsible for handling move commands (n, e, s, w, u, d)
     /// </summary>
-    public class Navigation
+    internal class Navigation
     {
 
         /// <summary>

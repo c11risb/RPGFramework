@@ -1,0 +1,7 @@
+﻿Object for NonPlayer Characters (NPCs) and Monsters
+
+NPC Catalog
+	Definition of all NPC types in the game
+NPC Database
+	All instantiated NPCs in the game world
+		Consider loading NPC data on demand based on player proximity or interaction.

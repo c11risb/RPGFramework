@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework.Display
 {
-    public static class DisplaySettings
+    internal static class DisplaySettings
     {
         public static string AnnouncementColor { get; set; } = "[red]";
 

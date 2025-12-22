@@ -7,7 +7,7 @@ using Spectre.Console;
 
 namespace RPGFramework.Display
 {
-    public class RPGPanel
+    internal class RPGPanel
     {
         public static BoxBorder Border { get; private set; } = BoxBorder.Rounded;
         public static string HeaderColor { get; private set; } = "[bold yellow]";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework
 {
-    public class Armor : Item
+    internal class Armor : Item
     {
         // TODO - Implement once we know how combat will work
     }

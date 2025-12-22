@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework.Enums
 {
-    public enum Direction
+    internal enum Direction
     {
         North,
         South,

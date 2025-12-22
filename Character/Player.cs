@@ -14,7 +14,7 @@ using RPGFramework.Enums;
 
 namespace RPGFramework
 {
-    public partial class Player : Character
+    internal partial class Player : Character
     {
         #region --- Properties --- 
         // Properties to NOT save (don't serialize)

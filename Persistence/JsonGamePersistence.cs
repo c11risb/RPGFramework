@@ -11,7 +11,7 @@ namespace RPGFramework.Persistence
     /// stored as an individual file. This class is not
     /// thread-safe. Concurrent calls to persistence methods may result in inconsistent 
     /// data if not externally synchronized.</remarks>
-    public sealed class JsonGamePersistence : IGamePersistence
+    internal sealed class JsonGamePersistence : IGamePersistence
     {
         public Task<Area?> LoadAreaAsync(string areaName)
         {

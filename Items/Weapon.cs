@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework
 {
-    public class Weapon : Item
+    internal class Weapon : Item
     {
         public double Damage { get; set; } = 0;
 

@@ -2,7 +2,7 @@
 
 namespace RPGFramework.Commands
 {
-    public interface ICommand
+    internal interface ICommand
     {
         /// <summary>
         /// Primary name for this command (used as an identifier).

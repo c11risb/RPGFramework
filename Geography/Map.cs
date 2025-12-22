@@ -8,7 +8,7 @@ namespace RPGFramework.Geography
 {
     // We'll use this to create display information for the map.
     // TODO!
-    public class Map
+    internal class Map
     {
     }
 }

@@ -8,7 +8,7 @@ using RPGFramework.Geography;
 
 namespace RPGFramework.Commands
 {
-    public class NavigationCommands
+    internal class NavigationCommands
     {
         public static List<ICommand> GetAllCommands()
         {
@@ -26,7 +26,7 @@ namespace RPGFramework.Commands
     /// </summary>
     /// <remarks>The <see cref="MapCommand"/> is typically invoked by player characters to view their
     /// immediate surroundings. This command is not applicable to non-player characters.</remarks>
-    public class MapCommand : ICommand
+    internal class MapCommand : ICommand
     {
         public string Name => "map";
 
@@ -47,7 +47,7 @@ namespace RPGFramework.Commands
     /// <summary>
     /// Move a character (player or NPC) in a direction if possible.
     /// </summary>
-    public class MoveCommand : ICommand
+    internal class MoveCommand : ICommand
     {
         public string Name => "move";
         public IEnumerable<string> Aliases => new List<string> 

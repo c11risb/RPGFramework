@@ -7,7 +7,7 @@ using RPGFramework.Display;
 
 namespace RPGFramework.Commands
 {
-    public class AdminCommands
+    internal class AdminCommands
     {
         public static List<ICommand> GetAllCommands()
         {
@@ -20,7 +20,7 @@ namespace RPGFramework.Commands
         }
     }
 
-    public class AnnounceCommand : ICommand
+    internal class AnnounceCommand : ICommand
     {
         public string Name => "announce";
         public IEnumerable<string> Aliases => new List<string>() { "ann" };
@@ -32,7 +32,7 @@ namespace RPGFramework.Commands
         }
     }
 
-    public class ShutdownCommand : ICommand
+    internal class ShutdownCommand : ICommand
     {
         public string Name => "shutdown";
         public IEnumerable<string> Aliases => new List<string>() { };

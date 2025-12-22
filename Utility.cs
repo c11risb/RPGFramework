@@ -11,7 +11,7 @@ namespace RPGFramework
     /// <summary>
     /// Generally helpful methods
     /// </summary>
-    public class Utility
+    internal class Utility
     {
         /// <summary>
         /// Check if player has permission to execute a command.

@@ -19,7 +19,7 @@ namespace RPGFramework
     /// <para> <b>Persistence:</b> The <see cref="Persistence"/> property determines how 
     /// game data is loaded and saved. By default, a JSON-based persistence
     /// mechanism is used, but this can be replaced with a custom implementation. </para> 
-    public sealed class GameState
+    internal sealed class GameState
     {
         // Static Fields and Properties
         private static readonly Lazy<GameState> _instance = new(() => new GameState());

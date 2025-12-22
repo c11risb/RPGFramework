@@ -11,7 +11,7 @@ using System.Xml.Linq;
 
 namespace RPGFramework
 {
-    public partial class Player
+    internal partial class Player
     {
         // Things to not save (don't serialize)
         [JsonIgnore]

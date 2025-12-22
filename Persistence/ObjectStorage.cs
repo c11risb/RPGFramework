@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework.Persistence
 {
-    public class ObjectStorage
+    internal class ObjectStorage
     {
         /// <summary>
         /// Save an object to a specified path and file name as JSON.

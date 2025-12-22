@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPGFramework.Geography
 {
-    public class Area
+    internal class Area
     {
         public int Id { get; set; } = 0;
         public string Name { get; set; } = "Void Area";

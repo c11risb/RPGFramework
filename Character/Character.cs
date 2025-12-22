@@ -10,7 +10,7 @@ namespace RPGFramework
     // Probably abstrctt
     // This is meant to hold all of the commmon elements for
     // players, NPCs, etc.
-    public class Character
+    internal class Character
     {
         public bool Alive { get; set; } = true;
         public int AreaId { get; set; } = 0;

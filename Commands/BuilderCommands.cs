@@ -9,7 +9,7 @@ using RPGFramework.Geography;
 
 namespace RPGFramework.Commands
 {
-    public class BuilderCommands
+    internal class BuilderCommands
     {
         public static List<ICommand> GetAllCommands()
         {
@@ -24,7 +24,7 @@ namespace RPGFramework.Commands
     /// <summary>
     /// /room command for building and editing rooms.
     /// </summary>
-    public class RoomBuilderCommand : ICommand
+    internal class RoomBuilderCommand : ICommand
     {
         public string Name => "/room";
 
